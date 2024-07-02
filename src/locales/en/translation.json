@@ -1,0 +1,103 @@
+{
+  "profile": {
+    "title": "Profile",
+    "description": "Born to a conservatory director father and an entrepreneurial mother with a taekwondo association, I learned the discipline of work and life early on.<br>By assisting with the renovation and maintenance of the family château from a young age, I developed a keen sense of responsibility and teamwork.<br>At seven, my father gifted me my first computer, sparking my curiosity for technology. By nine, I had built my first tower, marking my entry into the world of hardware.<br>However, it was with the acquisition of my first Arduino board at twelve that my passion for software and automation truly emerged.<br>I then learned solid programming basics through the \"Siteduzero\" (now OpenClassroom) site, and started creating JAVA mods for Minecraft.<br><br>After obtaining my baccalaureate in 2016 in engineering sciences with a specialty in computer science and digital sciences, I pursued my studies in mathematics and computer science at the University of Aix-en-Provence.<br>However, eager to quickly join the professional world, I opted for a JAVA J2E Expert training, which I funded by working at the Aubagne theater.<br>There, I gained practical skills in stage assembly and dressing room management, ensuring the well-being of artists and the smooth running of productions.<br><br>My entry into the professional world was marked by a collaboration with a friend launching his brand, where I created and managed their online sales site, set up complex setups for streamers, and optimized connections in a dedicated villa.<br>Encouraged to become a freelancer, I then diversified my services, completing projects ranging from simple landing pages to complex booking applications, as well as automation solutions for businesses.<br><br>Despite my technical skills and achievements, I have always found it difficult to sell my services due to my reserved nature.<br>Passionate about AI and emerging technologies, I am now looking for opportunities that will allow me to leverage and expand my programming skills while collaborating with teams that share my vision and enthusiasm for technological innovation."
+  },
+  "experience": {
+    "title": "Experience",
+    "freelance": {
+      "title": "Freelance Developer",
+      "date": "January 2022 to Present",
+      "description": [
+        "Development of several websites, ranging from showcase sites to e-commerce sites.",
+        "Creation of two simple mobile applications for event booking management.",
+        "Implementation of a marketing action with an answering machine and SMS link sending for creating temporary profiles.",
+        "Development of two app concepts for start-ups, using React, firebase or SQL and Python."
+    ]
+    
+    
+    
+    },
+    "infiniteAgency": {
+      "title": "Infinite Agency, Marseille — Web Technical Manager",
+      "date": "September 2019 to December 2021",
+      "description": "Creation and maintenance of the company's website, technical management of projects related to influencers and clothing sales, assembly and configuration of professional PCs for streamers."
+    },
+    "aubagne": {
+      "title": "Before my 20s - 2 years at the Aubagne town hall",
+      "date": "September 2017 to July 2019",
+      "description": "Hall keeper - Black Penitent of Aubagne then Comoedia Theater as a temporary worker (Reception, secretarial work, then dressing room manager)"
+    }
+  },
+  "education": {
+    "title": "Education",
+    "openClassroom": {
+      "title": "OpenClassroom, Internet — JAVA J2E Expert",
+      "date": "September 2018 to March 2020"
+    },
+    "jeanPerrin": {
+      "title": "Math-Computer Science, Jean Perrin, Aix-en-Provence",
+      "date": "September 2016 to May 2017"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "java": "Java: 5/10",
+    "python": "Python: 7/10",
+    "react": "JS/React/Node: 8/10",
+    "php": "PHP: 4/10",
+    "SQL": "SQL: 5/10",
+    "firebase": "Firebase: 7/10",
+    "gml": "GML: 6/10",
+    "c": "C: 3/10"
+  },
+  "distinctions": {
+    "title": "Distinctions",
+    "music": "Music: 10 years of piano lessons, practice of guitar.",
+    "technology": "Technologies and video games: Passionate about computers, video games, and artificial intelligence. I would like to create my own video game one day.",
+    "media": "Media: Regular consumer of YouTube content, both educational and/or entertaining.",
+    "veille": "Tech watch: I like to spend my time staying informed about IT news and applying/participating in the development of promising open-source projects.",
+    "events": "Events: I also take care of the courtesy of events and the work of my father's castle."
+  },
+  "languages": {
+    "title": "Languages",
+    "french": "French - Native",
+    "english": "English - B2 Level"
+  }, 
+  "feedback": {
+    "title": "Feedback",
+    "reviews": "reviews",
+    "submit": "Submit",
+    "name": "Name",
+    "surname": "Surname",
+    "comment": "Comment"
+  },
+  "cv": {
+    "title": "CV"
+  },
+  "project": {
+    "title": "Projects",
+    "title2": "Public Projects",
+    "view": " Go on the website"
+  },
+  "project1": {
+    "title": "Project 1: Lumiscool in progress",
+    "description": "This project is an ambitious platform for booking activities..."
+  },
+  "project2": {
+    "title": "Project 2: Chateau de Vins sur Caramy",
+    "description": "The website for my father's castle, which I need to redo."
+  },
+  "project3": {
+    "title": "Project 3: L'échapée des plaisirs",
+    "description": "Showcase site for guest rooms."
+  },
+  "project4": {
+    "title": "Project 4: Amazon Scraper",
+    "description": "Scrape Amazon to sort results by price, rating, and number of reviews..."
+  },
+  "project5": {
+    "title": "Project 5: Dalhae Academy",
+    "description": "The website for my mother's taekwondo club..."
+  }
+}

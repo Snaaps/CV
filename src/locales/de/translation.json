@@ -1,0 +1,101 @@
+{
+  "profile": {
+    "title": "Profil",
+    "description": "Geboren als Sohn eines Konservatoriumsdirektors und einer unternehmerischen Mutter mit einem Taekwondo-Verein, habe ich früh die Disziplin von Arbeit und Leben gelernt.<br>Durch die Unterstützung bei der Renovierung und Wartung des Familienschlosses in jungen Jahren entwickelte ich ein starkes Verantwortungsbewusstsein und Teamarbeit.<br>Mit sieben Jahren schenkte mir mein Vater meinen ersten Computer, was meine Neugier für Technologie weckte. Mit neun baute ich meinen ersten Tower und markierte damit meinen Einstieg in die Hardware-Welt.<br>Doch mit dem Erwerb meines ersten Arduino-Boards im Alter von zwölf Jahren entdeckte ich meine Leidenschaft für Software und Automatisierung.<br>Ich erlernte solide Programmiergrundlagen durch die Seite \"Siteduzero\" (heute OpenClassroom) und begann, JAVA-Mods für Minecraft zu erstellen.<br><br>Nach dem Abitur 2016 in Ingenieurwissenschaften mit Schwerpunkt Informatik und Digitale Wissenschaften setzte ich mein Studium der Mathematik und Informatik an der Universität Aix-en-Provence fort.<br>Doch da ich schnell in die Berufswelt eintreten wollte, entschied ich mich für eine Ausbildung zum JAVA J2E-Experten, die ich durch meine Arbeit im Theater von Aubagne finanzierte.<br>Dort erwarb ich praktische Fähigkeiten im Bühnenaufbau und im Management der Künstlergarderoben und sorgte für das Wohlbefinden der Künstler und den reibungslosen Ablauf der Produktionen.<br><br>Mein Einstieg in die Berufswelt wurde durch die Zusammenarbeit mit einem Freund geprägt, der seine Marke gründete, wo ich ihre Online-Verkaufsseite erstellte und verwaltete, komplexe Setups für Streamer aufbaute und die Verbindungen in einer speziellen Villa optimierte.<br>Ermutigt, freiberuflich tätig zu werden, diversifizierte ich anschließend meine Dienstleistungen und realisierte Projekte, die von einfachen Landingpages bis hin zu komplexen Buchungsanwendungen und Automatisierungslösungen für Unternehmen reichten.<br><br>Trotz meiner technischen Fähigkeiten und Erfolge fiel es mir immer schwer, meine Dienstleistungen aufgrund meiner zurückhaltenden Natur zu verkaufen.<br>Mit Leidenschaft für KI und aufstrebende Technologien suche ich nun nach Möglichkeiten, meine Programmierkenntnisse zu nutzen und zu erweitern, während ich mit Teams zusammenarbeite, die meine Vision und Begeisterung für technologische Innovation teilen."
+  },
+  "experience": {
+    "title": "Erfahrung",
+    "freelance": {
+      "title": "Freiberuflicher Entwickler",
+      "date": "Januar 2022 bis Heute",
+      "description": [
+        "Entwicklung mehrerer Websites, von Schaufensterseiten bis hin zu E-Commerce-Seiten.",
+        "Erstellung von zwei einfachen mobilen Anwendungen für das Veranstaltungsbuchungsmanagement.",
+        "Implementierung einer Marketingaktion mit Anrufbeantworter und SMS-Link-Versand zur Erstellung temporärer Profile.",
+        "Entwicklung von zwei App-Konzepten für Start-ups, unter Verwendung von React, firebase or SQL und Python."
+    ]
+    
+    },
+    "infiniteAgency": {
+      "title": "Infinite Agency, Marseille — Webtechnischer Leiter",
+      "date": "September 2019 bis Dezember 2021",
+      "description": "Erstellung und Wartung der Unternehmenswebsite, technische Verwaltung von Projekten im Zusammenhang mit Influencern und Bekleidungsverkäufen, Montage und Konfiguration professioneller PCs für Streamer."
+    },
+    "aubagne": {
+      "title": "Vor meinem 20. Lebensjahr - 2 Jahre im Rathaus von Aubagne",
+      "date": "September 2017 bis Juli 2019",
+      "description": "Saaldiener - Schwarzer Büßer von Aubagne, dann Comoedia-Theater als Aushilfe (Empfang, Sekretariatsarbeit, dann Garderobenleiter)"
+    }
+  },
+  "education": {
+    "title": "Ausbildung",
+    "openClassroom": {
+      "title": "OpenClassroom, Internet — JAVA J2E Experte",
+      "date": "September 2018 bis März 2020"
+    },
+    "jeanPerrin": {
+      "title": "Mathematik-Informatik, Jean Perrin, Aix-en-Provence",
+      "date": "September 2016 bis Mai 2017"
+    }
+  },
+  "skills": {
+    "title": "Fähigkeiten",
+    "java": "Java: 5/10",
+    "python": "Python: 7/10",
+    "react": "JS/React/Node: 8/10",  
+    "php": "PHP: 4/10",
+    "SQL": "SQL: 5/10",
+    "firebase": "Firebase: 7/10",
+    "gml": "GML: 6/10",
+    "c": "C: 3/10"
+  },
+  "distinctions": {
+    "title": "Auszeichnungen",
+    "music": "Musik: 10 Jahre Klavierunterricht, Gitarre spielen.",
+    "technology": "Technologien und Videospiele: Leidenschaftlich für Computer, Videospiele und künstliche Intelligenz. Ich möchte eines Tages mein eigenes Videospiel erstellen.",
+    "media": "Medien: Regelmäßiger Konsument von YouTube-Inhalten, sowohl lehrreich als auch unterhaltsam.",
+    "veille": "Technologieüberwachung: Ich verbringe gerne meine Zeit damit, mich über IT-Neuigkeiten zu informieren und vielversprechende Open-Source-Projekte zu entwickeln.",
+    "events": "Veranstaltungen: Ich kümmere mich auch um die Höflichkeit der Veranstaltungen und die Arbeiten am Schloss meines Vaters."
+  },
+  "languages": {
+    "title": "Sprachen",
+    "french": "Französisch - Muttersprache",
+    "english": "Englisch - B2-Niveau"
+  },
+  "feedback": {
+    "title": "Bewertungen",
+    "reviews": "Bewertungen",
+    "submit": "Absenden",
+    "name": "Name",
+    "surname": "Nachname",
+    "comment": "Kommentar"
+  },
+  "cv": {
+    "title": "Lebenslauf"
+  },
+  "project": {
+    "title": "Projekte",
+    "title2": "Öffentliche Projekte",
+    "view": "Zur Webseite"
+  },
+  "project1": {
+    "title": "Projekt 1: Lumiscool in Arbeit",
+    "description": "Dieses Projekt ist eine ehrgeizige Plattform zur Buchung von Aktivitäten..."
+  },
+  "project2": {
+    "title": "Projekt 2: Chateau de Vins sur Caramy",
+    "description": "Die Website für das Schloss meines Vaters, die ich neu gestalten muss."
+  },
+  "project3": {
+    "title": "Projekt 3: L'échapée des plaisirs",
+    "description": "Schaufensterseite für Gästezimmer."
+  },
+  "project4": {
+    "title": "Projekt 4: Amazon Scraper",
+    "description": "Amazon durchsuchen, um Ergebnisse nach Preis, Bewertung und Anzahl der Bewertungen zu sortieren..."
+  },
+  "project5": {
+    "title": "Projekt 5: Dalhae Akademie",
+    "description": "Die Website für den Taekwondo-Club meiner Mutter..."
+  }
+}

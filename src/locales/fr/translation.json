@@ -51,7 +51,7 @@
   },
   "distinctions": {
     "title": "Distinctions",
-    "music": "Musique : 10 ans de cours de piano, pratique de la guitare.",
+    "music": "Musique : 10 ans de cours de piano, pratique de la guitare et du fifre.",
     "technology": "Technologies et jeux vidéo : Passionné d'informatique, de jeux vidéo et d'intelligence artificielle. J'aimerais faire un jour mon propre jeu vidéo.",
     "media": "Médias : Consommateur régulier de contenu YouTube, à la fois éducatif et/ou divertissant.",
     "veille": "Veille informatique : J'aime passer mon temps à m'informer de l'actualité informatique et appliquer/participer aux développement de projet open-source que je trouve prometteur.",
@@ -63,7 +63,15 @@
     "english": "Anglais - Niveau B2"
   },
   "cv": {
-    "title": "CV"
+    "title": "CV",
+    "download": "Version imprimable"
+  },
+  "partitionsFifre": {
+    "title": "Partition de fifre"
+  },
+  "Perso": {
+    "title": "Perso"
+
   },
   "feedback": {
     "title": "Avis",

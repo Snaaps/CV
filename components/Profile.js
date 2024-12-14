@@ -61,6 +61,15 @@ const SocialMediaContainer = styled.div`
   bottom:45px;
 `;
 
+const DownloadableCVContainer = styled.div`
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  position: absolute;
+  flex-direction : row;
+  right: 20px;
+  top:45px;
+`;
 const SocialButton = styled.a`
   color: white;
   margin: 0 10px;
@@ -78,6 +87,29 @@ const SocialButton = styled.a`
   &:hover {
     color: #6f2cf7;
   }
+`;
+const DownloadButton = styled.a`
+  color: white;
+  font-size: 24px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius:50%;
+  margin:5px;
+  padding:5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  &:hover {
+    color: #6f2cf7;
+  }
+`;
+
+const DownloadText = styled.span`
+  font-size: 16px;
+  margin-right: 10px;
+  color: white;
 `;
 
 const Profile = () => {
@@ -97,6 +129,12 @@ const Profile = () => {
           contentFit="cover"
           transition={1000}
         />
+        <DownloadableCVContainer>
+          <DownloadText>{t('cv.download')}</DownloadText>
+          <DownloadButton href="/path-to-your-cv/CV.pdf" target="_blank" rel="noopener noreferrer">
+            <FontAwesome name="download" />
+          </DownloadButton>
+        </DownloadableCVContainer>
         <SocialMediaContainer>
           <SocialButton href="https://www.instagram.com/p/C5kxV0tqLaf/?next=%2F" target="_blank">
             <FontAwesome name="instagram" />

@@ -103,7 +103,7 @@ const Project = () => {
       {
         title: 'project5.title',
         description: 'project5.description',
-        previewUrl: 'https://dalhae-academie.webflow.io/',
+        previewUrl: 'https://www.dalhae-academie.com/',
         link: 'https://www.dalhae-academie.com/',
 
       },

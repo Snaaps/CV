@@ -6,10 +6,12 @@ import Navbar from './components/Navbar'; // Le composant Header pour les petits
 import Header from './components/Header';
 import Profile from './components/Profile';
 import Experience from './components/Experience';
+import Fifre from './components/Fifre';
+import Perso from './components/Perso/Perso';
+import PartitionsFifre from './components/PartitionsFifre';
 import Skills from './components/Skills';
 import Education from './components/Education';
 import Footer from './components/Footer';
-import Avis from './components/Avis';
 import Distinctions from './components/Distinctions';
 import Languages from './components/Languages';
 import Project from './components/Project';
@@ -135,8 +137,10 @@ const App = () => {
             </Section>
           </>
         )}
-        {activePage === 'avis' && <Avis />}
         {activePage === 'project' && <Project />}
+        {activePage === 'partitionsFifre' && <Fifre />}
+        {activePage === 'Perso' && <Perso />}
+
         <Footer />
       </MainContent>
     </AppContainer>

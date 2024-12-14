@@ -11,7 +11,7 @@
       "description": [
         "Desarrollo de varios sitios web, desde sitios de presentación hasta sitios de comercio electrónico.",
         "Creación de dos aplicaciones móviles sencillas para la gestión de reservas de eventos.",
-        "Implementación de una acción de marketing con contestador automático y envío de enlaces SMS para la creación de perfiles temporales.",
+        "Implementación de una acción de marketing con contestoador automático y envío de enlaces SMS para la creación de perfiles temporales.",
         "Desarrollo de dos conceptos de aplicaciones para start-ups, utilizando React , firebase or SQL y Python."
     ]
     
@@ -51,7 +51,7 @@
   },
   "distinctions": {
     "title": "Distinciones",
-    "music": "Música: 10 años de clases de piano, práctica de guitarra.",
+    "music": "Música: 10 años de clases de piano, práctica de Guitarra & Pífano.",
     "technology": "Tecnologías y videojuegos: Apasionado de la informática, los videojuegos y la inteligencia artificial. Me gustaría crear mi propio videojuego algún día.",
     "media": "Medios: Consumidor regular de contenido de YouTube, tanto educativo como/o entretenido.",
     "veille": "Vigilancia tecnológica: Me gusta pasar mi tiempo manteniéndome informado sobre las noticias de TI y aplicando/participando en el desarrollo de proyectos de código abierto prometedores.",
@@ -70,8 +70,16 @@
     "surname": "Apellido",
     "comment": "Comentario"
   },
+  "partitionsFifre": {
+    "title": "Catalan fifre"
+  },
+  "Perso": {
+    "title": "Perso"
+
+  },
   "cv": {
-    "title": "CV"
+    "title": "CV",
+    "download": "Versión Imprimible"
   },
   "project": {
     "title": "Proyectos",

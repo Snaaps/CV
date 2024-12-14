@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaUser, FaBriefcase, FaGraduationCap, FaTools, FaFileAlt, FaComments, FaMedal, FaLanguage } from 'react-icons/fa';
+import { FaUser, FaMusic, FaBriefcase, FaGraduationCap, FaTools, FaFileAlt, FaComments, FaMedal, FaLanguage } from 'react-icons/fa';
 import { useTrail, animated } from '@react-spring/web';
 import { useTranslation } from 'react-i18next';
 import { Image } from 'expo-image';
-import { TouchableOpacity } from 'react-native-web';
+import { ScrollView, TouchableOpacity } from 'react-native-web';
 import fra from '../assets/fra.png'; 
 import unk from '../assets/unk.png'; 
 import spa from '../assets/spa.png'; 
@@ -34,9 +34,10 @@ const LogoContainer = styled.div`
   align-items: center;
 `;
 
-const NavItemsContainer = styled.div`
+const NavItemsWrapper = styled.div`
   flex-grow: 1;
   width: 100%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,6 +48,7 @@ const NavItem = styled.div`
   padding: 15px;
   display: flex;
   align-items: center;
+  align-self: center; 
   margin-top: 20px;
   cursor: pointer;
   background-color: ${(props) => (props.active ? '#6f2cf7' : 'transparent')};
@@ -71,6 +73,7 @@ const SubNavItem = styled(animated.div)`
   padding: 15px;
   display: flex;
   align-items: center;
+  align-self: center; 
   cursor: pointer;
   background-color: ${(props) => (props.active ? '#6f2cf7' : 'transparent')};
   color: ${(props) => (props.active ? '#ffffff' : '#2c3e50')};
@@ -80,7 +83,7 @@ const SubNavItem = styled(animated.div)`
   &:hover {
     background-color: #6f2cf7;
     color: #ffffff;
-    border : 1px solid #6f2cf7;
+    border: 1px solid #6f2cf7;
   }
 
   svg {
@@ -119,7 +122,7 @@ const subItems = [
 const Sidebar = ({ activePage, setActivePage, scrollToSection, profileRef, experienceRef, skillsRef, educationRef, distinctionsRef, languagesRef }) => {
   const { t, i18n } = useTranslation();
   const refs = { profileRef, experienceRef, skillsRef, educationRef, distinctionsRef, languagesRef };
-  
+
   const trail = useTrail(subItems.length, {
     opacity: activePage === 'cv' ? 1 : 0,
     transform: activePage === 'cv' ? 'translateY(0)' : 'translateY(-70px)',
@@ -142,37 +145,44 @@ const Sidebar = ({ activePage, setActivePage, scrollToSection, profileRef, exper
           </g>
         </svg>
       </LogoContainer>
-      <NavItemsContainer>
-        <NavItem active={activePage === 'cv'} onClick={() => setActivePage('cv')}>
-          <FaFileAlt size={25} /> <span>{t('cv.title')}</span>
-        </NavItem>
-        {activePage === 'cv' && trail.map((style, index) => {
-          const { icon: Icon, label, ref } = subItems[index];
-          return (
-            <SubNavItem 
-              style={style} 
-              key={label} 
-              onClick={() => {
-                console.log('SubNavItem clicked:', label, refs[ref]);
-                if (refs[ref] && refs[ref].current) {
-                  console.log('Scrolling to:', refs[ref].current);
-                  scrollToSection(refs[ref]);
-                } else {
-                  console.log('Invalid ref:', refs[ref]);
-                }
-              }}
-            >
-              <Icon size={25} /> <span>{t(label)}</span>
-            </SubNavItem>
-          );
-        })}
-        <NavItem active={activePage === 'project'} onClick={() => { setActivePage('project'); scrollToSection(languagesRef); }}>
-          <FaComments size={20} /> <span>{t('project.title')}</span>
-        </NavItem>
-        <NavItem active={activePage === 'avis'} onClick={() => setActivePage('avis')}>
-          <FaComments size={25} /> <span>{t('feedback.title')}</span>
-        </NavItem>
-      </NavItemsContainer>
+      <NavItemsWrapper>
+        <ScrollView 
+          style={{ 
+            width: '100%',
+            flexGrow: 1,
+            alignSelf:'center'
+          }}
+        >
+          <NavItem active={activePage === 'cv'} onClick={() => setActivePage('cv')}>
+            <FaFileAlt size={25} /> <span>{t('cv.title')}</span>
+          </NavItem>
+          {activePage === 'cv' && trail.map((style, index) => {
+            const { icon: Icon, label, ref } = subItems[index];
+            return (
+              <SubNavItem 
+                style={style} 
+                key={label} 
+                onClick={() => {
+                  if (refs[ref] && refs[ref].current) {
+                    scrollToSection(refs[ref]);
+                  } 
+                }}
+              >
+                <Icon size={25} /> <span>{t(label)}</span>
+              </SubNavItem>
+            );
+          })}
+          <NavItem active={activePage === 'project'} onClick={() => { setActivePage('project'); scrollToSection(languagesRef); }}>
+            <FaComments size={20} /> <span>{t('project.title')}</span>
+          </NavItem>
+          <NavItem active={activePage === 'partitionsFifre'} onClick={() => setActivePage('partitionsFifre')}>
+            <FaMusic size={25} /> <span>{t('partitionsFifre.title')}</span>
+          </NavItem>
+          <NavItem active={activePage === 'Perso'} onClick={() => setActivePage('Perso')}>
+            <FaMusic size={25} /> <span>{t('Perso.title')}</span>
+          </NavItem>
+        </ScrollView>
+      </NavItemsWrapper>
       <LanguageSelector>
         <TouchableOpacity style={{marginLeft:5}} onPress={() => changeLanguage('fr')} >
           <Image

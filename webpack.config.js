@@ -13,5 +13,8 @@ module.exports = async function(env, argv) {
     "url": require.resolve("url"),
     "vm": require.resolve("vm-browserify")
   };
+
+    config.output.publicPath = '/';
+
   return config;
 };

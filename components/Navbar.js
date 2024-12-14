@@ -1,7 +1,7 @@
 import React, { useState } from 'react'; 
 import { TouchableOpacity } from 'react-native-web';
 import styled from 'styled-components';
-import { FaBars, FaUser, FaBriefcase, FaGraduationCap, FaTools, FaFileAlt, FaComments, FaMedal, FaLanguage } from 'react-icons/fa';
+import { FaBars,FaMusic, FaUser, FaBriefcase, FaGraduationCap, FaTools, FaFileAlt, FaComments, FaMedal, FaLanguage } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
 import { Image } from 'expo-image';
@@ -100,11 +100,16 @@ const Navbar = ({ activePage, setActivePage, scrollToSection, profileRef, experi
           <FaFileAlt size={20} /> <span>{t('cv.title')}</span>
         </DropdownItem>
         
-        <DropdownItem active={activePage === 'avis'} onClick={() => { setActivePage('avis'); setShowMenu(false); }}>
-          <FaComments size={20} /> <span>{t('feedback.title')}</span>
-        </DropdownItem>
         <DropdownItem active={activePage === 'projet'} onClick={() => { setActivePage('projet'); setShowMenu(false); }}>
           <FaComments size={20} /> <span>{t('project.title')}</span>
+        </DropdownItem>
+        <DropdownItem active={activePage === 'fifre'} onClick={() => { setActivePage('fifre'); setShowMenu(false); }}>
+  
+          <FaMusic size={20} /> <span>Partitions Fifre</span>
+        </DropdownItem>
+        <DropdownItem active={activePage === 'Perso'} onClick={() => { setActivePage('Perso'); setShowMenu(false); }}>
+  
+          <FaMusic size={20} /> <span>Perso</span>
         </DropdownItem>
         <LanguageSelector>
         <TouchableOpacity style={{marginLeft:5}} onPress={() => changeLanguage('fr')} >

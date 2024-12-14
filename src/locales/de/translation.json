@@ -51,11 +51,19 @@
   },
   "distinctions": {
     "title": "Auszeichnungen",
-    "music": "Musik: 10 Jahre Klavierunterricht, Gitarre spielen.",
+    "music": "Musik: 10 Jahre Klavierunterricht, Schwegel & Gitarre spielen.",
     "technology": "Technologien und Videospiele: Leidenschaftlich für Computer, Videospiele und künstliche Intelligenz. Ich möchte eines Tages mein eigenes Videospiel erstellen.",
     "media": "Medien: Regelmäßiger Konsument von YouTube-Inhalten, sowohl lehrreich als auch unterhaltsam.",
     "veille": "Technologieüberwachung: Ich verbringe gerne meine Zeit damit, mich über IT-Neuigkeiten zu informieren und vielversprechende Open-Source-Projekte zu entwickeln.",
     "events": "Veranstaltungen: Ich kümmere mich auch um die Höflichkeit der Veranstaltungen und die Arbeiten am Schloss meines Vaters."
+  },
+  "partitionsFifre": {
+    "title": "Fifren"
+
+  },
+  "Perso": {
+    "title": "Perso"
+
   },
   "languages": {
     "title": "Sprachen",
@@ -71,7 +79,8 @@
     "comment": "Kommentar"
   },
   "cv": {
-    "title": "Lebenslauf"
+    "title": "Lebenslauf",
+    "download": "Druckbare Version"
   },
   "project": {
     "title": "Projekte",

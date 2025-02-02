@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/static/js/main.a2a5b04b.js",
-    "static/js/329.ed897052.js": "/static/js/329.ed897052.js",
-    "static/media/bg.jpg": "/static/media/bg.686f64df7c3b3fde89de.jpg",
-    "static/media/FontAwesome.ttf": "/static/media/FontAwesome.1e59d2330b4c6deb84b3.ttf",
-    "static/media/pp.jpg": "/static/media/pp.4af3ec75ba96e0f6e90c.jpg",
-    "favicon.ico": "/favicon.ico",
-    "index.html": "/index.html",
-    "static/media/unk.png": "/static/media/unk.81b367bcf4e83250d2b0.png",
-    "favicon-32.png": "/favicon-32.png",
-    "favicon-16.png": "/favicon-16.png",
-    "serve.json": "/serve.json",
-    "manifest.json": "/manifest.json",
-    "main.a2a5b04b.js.map": "/static/js/main.a2a5b04b.js.map",
-    "329.ed897052.js.map": "/static/js/329.ed897052.js.map"
+    "main.js": "./static/js/main.a2a5b04b.js",
+    "static/js/329.ed897052.js": "./static/js/329.ed897052.js",
+    "static/media/bg.jpg": "./static/media/bg.686f64df7c3b3fde89de.jpg",
+    "static/media/FontAwesome.ttf": "./static/media/FontAwesome.1e59d2330b4c6deb84b3.ttf",
+    "static/media/pp.jpg": "./static/media/pp.4af3ec75ba96e0f6e90c.jpg",
+    "favicon.ico": "./favicon.ico",
+    "index.html": "./index.html",
+    "static/media/unk.png": "./static/media/unk.81b367bcf4e83250d2b0.png",
+    "favicon-32.png": "./favicon-32.png",
+    "favicon-16.png": "./favicon-16.png",
+    "serve.json": "./serve.json",
+    "manifest.json": "./manifest.json",
+    "main.a2a5b04b.js.map": "./static/js/main.a2a5b04b.js.map",
+    "329.ed897052.js.map": "./static/js/329.ed897052.js.map"
   },
   "entrypoints": [
     "static/js/329.ed897052.js",

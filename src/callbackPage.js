@@ -21,7 +21,7 @@ function CallbackPage() {
     //    a) Soit vous laissez votre Node faire l’échange en direct (dans ce cas, cette page affiche un message).
     //    b) Soit vous envoyez ce code manuellement en POST vers /tokenExchange.
     //    Ici on illustre un GET direct :
-    fetch(`http://82.64.55.60:3000/callback?code=${code}`)
+    fetch(`https://mon-serveur-node-143630968799.europe-west1.run.app/callback?code=${code}`)
       .then(response => response.text())
       .then(txt => {
         setContent(txt);

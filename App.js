@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import Distinctions from './components/Distinctions';
 import Languages from './components/Languages';
 import './i18n'; // Importer la configuration i18next
+import { HashRouter } from 'react-router-dom';
 
 const AppContainer = styled.div`
   display: flex;
@@ -43,7 +44,7 @@ const Section1 = styled(Section)`
   overflow: hidden;
 `;
 
-export default function App() {
+function AppContent() {
   const [activePage, setActivePage] = useState('cv');
   const [showSidebar, setShowSidebar] = useState(true);
 
@@ -56,19 +57,31 @@ export default function App() {
   const languagesRef = useRef(null);
 
   // Gestion du callback pour récupérer le code et le stocker dans un cookie
+  // Avec HashRouter, l'URL ressemble à "#/callback?code=..."
   useEffect(() => {
-    if (window.location.pathname === '/callback') {
-      const urlParams = new URLSearchParams(window.location.search);
+    if (window.location.hash.includes('/callback')) {
+      const hash = window.location.hash;
+      const index = hash.indexOf('?');
+      const queryString = index !== -1 ? hash.substring(index) : "";
+      const urlParams = new URLSearchParams(queryString);
+  
+      // 1) Récupérer le paramètre `code` s’il existe
       const code = urlParams.get('code');
-      
       if (code) {
-        // Enregistrement du code dans un cookie pour toute l'application
         document.cookie = `google_auth_code=${code}; path=/;`;
       }
-      // Optionnel : rediriger vers la page d'accueil après l'enregistrement
-      window.location.href = '/';
+  
+      // 2) Récupérer le paramètre `userId` s’il existe
+      const userId = urlParams.get('userId');
+      if (userId) {
+        document.cookie = `userId=${userId}; path=/;`;
+      }
+  
+      // 3) Rediriger (retrait du /callback dans l'URL)
+      window.location.hash = "/";
     }
   }, []);
+  
 
   // Gestion de l'affichage du sidebar en fonction de la taille de l'écran
   useEffect(() => {
@@ -147,5 +160,13 @@ export default function App() {
 
       <Footer />
     </AppContainer>
+  );
+}
+
+export default function App() {
+  return (
+    <HashRouter>
+      <AppContent />
+    </HashRouter>
   );
 }

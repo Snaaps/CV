@@ -2,7 +2,7 @@
   "name": "cv",
   "version": "1.0.0",
   "main": "expo/AppEntry.js",
-  "homepage": "https://Snaaps.github.io/CV",
+  "homepage": "https://Snaaps.github.io/CV/",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",

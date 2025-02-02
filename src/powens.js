@@ -119,9 +119,12 @@ export default function PowensScreen() {
           ) : (
             <>
               <Step1AuthSection
-                powensToken={powensToken}
-                setPowensToken={setPowensToken}
-              />
+  powensToken={powensToken}
+  setPowensToken={setPowensToken}
+  userId={userId}
+  setUserId={setUserId}
+/>
+
               <Button title="Suivant" onPress={goNext} />
             </>
           )}

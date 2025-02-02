@@ -1,33 +1,118 @@
-// CallbackPage.js
-import React, { useEffect } from 'react';
-import { View, Text } from 'react-native';
-import { useLocalSearchParams, useRouter } from 'expo-router';
-import Cookies from 'js-cookie';
+// sections/Step1AuthSection.tsx
+import React, { useState } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import * as WebBrowser from 'expo-web-browser';
+import * as Linking from 'expo-linking';
 
-export default function CallbackPage() {
-  const router = useRouter();
-  const searchParams = useLocalSearchParams();
 
-  useEffect(() => {
-    let mounted = true;
-    const userId = searchParams.userId;
-    if (userId) {
-      Cookies.set('userId', userId, { expires: 7 });
-      const timer = setTimeout(() => {
-        if (mounted) {
-          router.push('/powens');
+export function Step1AuthSection({
+  powensToken,
+  setPowensToken,
+  userId,
+  setUserId,
+}) {
+  const [loading, setLoading] = useState(false);
+
+  const handleAuthAndUserCreation = async () => {
+    setLoading(true);
+    try {
+      // 1) Ouvrir le flow OAuth Google côté serveur
+      const result = await WebBrowser.openBrowserAsync(
+        'https://mon-serveur-node-143630968799.europe-west1.run.app/auth/google'
+      );
+
+      // 2) Si success, Google aura redirigé vers un URL contenant ?userId=... 
+      if (result.type === 'success' && result.url) {
+        const parsed = Linking.parse(result.url);
+        if (parsed.queryParams?.userId) {
+          console.log('Google userId =>', parsed.queryParams.userId);
+          setUserId(parsed.queryParams.userId); // Stocke en state => ira en cookie
         }
-      }, 100);
-      return () => {
-        mounted = false;
-        clearTimeout(timer);
-      };
+      }
+
+      // 3) Création du user Powens (on enchaîne directement)
+      const response = await fetch(
+        'https://infinite-sandbox.biapi.pro/2.0/auth/init',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            client_id: '82059527',
+            client_secret: '4K/jbgW/Y77ml/fdnK98MNWU4wGdl_lz',
+          }),
+        }
+      );
+      if (!response.ok) {
+        throw new Error(`Erreur création user Powens: code HTTP ${response.status}`);
+      }
+      const data = await response.json();
+      console.log('Powens token =>', data.auth_token);
+      setPowensToken(data.auth_token); // Stocke en state => ira en cookie
+    } catch (err) {
+      console.error('Erreur handleAuthAndUserCreation:', err);
+    } finally {
+      setLoading(false);
     }
-  }, [searchParams, router]);
+  };
+
+  // Si on a déjà un powensToken, affichage simple
+  if (powensToken) {
+    return (
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>
+          Étape 1 : Authentification déjà effectuée
+        </Text>
+        <Text style={styles.info}>
+          Powens Token: {powensToken.slice(0, 15)}...
+        </Text>
+        <Text style={styles.info}>
+          Google userId: {userId || 'Non défini'}
+        </Text>
+      </View>
+    );
+  }
 
   return (
-    <View style={{ padding: 20, alignItems: 'center', justifyContent: 'center', flex: 1 }}>
-      <Text>Authentification réussie. Veuillez patienter...</Text>
+    <View style={styles.section}>
+      <Text style={styles.sectionTitle}>
+        Étape 1 : Auth Google + User Powens
+      </Text>
+      <Text style={styles.paragraph}>
+        Un seul bouton pour lancer Google OAuth puis créer un user Powens.
+      </Text>
+      <TouchableOpacity
+        style={[styles.button, loading && { opacity: 0.6 }]}
+        onPress={handleAuthAndUserCreation}
+        disabled={loading}
+      >
+        <Text style={styles.buttonText}>
+          {loading ? 'En cours...' : 'Se connecter Google + Créer user Powens'}
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  section: {
+    backgroundColor: '#fff',
+    marginVertical: 10,
+    padding: 15,
+    borderRadius: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    elevation: 2,
+  },
+  sectionTitle: { fontSize: 16, fontWeight: '600', marginBottom: 6 },
+  paragraph: { fontSize: 14, marginBottom: 10, color: '#333' },
+  button: {
+    backgroundColor: '#2e86de',
+    borderRadius: 5,
+    padding: 10,
+    marginVertical: 5,
+    alignItems: 'center',
+  },
+  buttonText: { color: '#fff' },
+  info: { marginTop: 8, fontStyle: 'italic', color: '#555' },
+});

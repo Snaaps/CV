@@ -55,6 +55,22 @@ export default function App() {
   const distinctionsRef = useRef(null);
   const languagesRef = useRef(null);
 
+  // Gestion du callback pour récupérer le code et le stocker dans un cookie
+  useEffect(() => {
+    if (window.location.pathname === '/callback') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const code = urlParams.get('code');
+      
+      if (code) {
+        // Enregistrement du code dans un cookie pour toute l'application
+        document.cookie = `google_auth_code=${code}; path=/;`;
+      }
+      // Optionnel : rediriger vers la page d'accueil après l'enregistrement
+      window.location.href = '/';
+    }
+  }, []);
+
+  // Gestion de l'affichage du sidebar en fonction de la taille de l'écran
   useEffect(() => {
     const handleResize = () => {
       setShowSidebar(window.innerWidth > 768);

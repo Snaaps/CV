@@ -14,11 +14,6 @@ module.exports = async function(env, argv) {
     "vm": require.resolve("vm-browserify")
   };
 
-  // Ajoutez une règle pour forcer Webpack à traiter react-native-swiper en mode CommonJS
-  config.module.rules.push({
-    test: /react-native-swiper[\\/]index\.js$/,
-    type: 'javascript/auto',
-  });
     config.output.publicPath = '/';
 
   return config;

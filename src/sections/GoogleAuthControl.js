@@ -9,11 +9,7 @@ export function GoogleAuthControl({ googleToken, setGoogleToken, setUserId }) {
   const handleGoogleLogin = async () => {
     try {
       // Lance le flow OAuth Google côté serveur
-<<<<<<< HEAD
       const result = await WebBrowser.openBrowserAsync('https://mon-serveur-node-143630968799.europe-west1.run.app/auth/google');
-=======
-      const result = await WebBrowser.openBrowserAsync('http://82.64.55.60:3000/auth/google');
->>>>>>> 09567966791b3604034d66806efeca547eb5a1da
       // Lorsque l'utilisateur termine l'authentification, le serveur redirige vers une URL de deep linking (ex: myapp://callback?userId=xxx)
       if (result.type === 'success' && result.url) {
         // Extraire les query parameters de l'URL

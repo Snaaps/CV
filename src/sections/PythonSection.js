@@ -18,7 +18,7 @@ export function PythonSection({
   });
   
     try {
-      const response = await fetch('http://localhost:3000/start_python_process', {
+      const response = await fetch('http://82.64.55.60:3000/start_python_process', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -11,7 +11,9 @@ module.exports = async function(env, argv) {
     "https": require.resolve("https-browserify"),
     "os": require.resolve("os-browserify/browser"),
     "url": require.resolve("url"),
-    "vm": require.resolve("vm-browserify")
+    "vm": require.resolve("vm-browserify"),
+    'expo/dom': false,
+    'expo/dom/global': false,
   };
 
     config.output.publicPath = '/';

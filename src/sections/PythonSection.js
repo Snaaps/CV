@@ -11,11 +11,12 @@ export function PythonSection({
 }) {
 
   const handleStartPython = async () => {
-    console.log("Will POST to /start_python_process with:", {
+
+    console.log("Will POST to /start_python_process with:", JSON.stringify({
     userId,
     lines_json_str: linesJson,
     priceStr
-  });
+  }));
   
     try {
       const response = await fetch('https://mon-serveur-node-143630968799.europe-west1.run.app/start_python_process', {

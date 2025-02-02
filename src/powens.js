@@ -29,7 +29,8 @@ export default function PowensScreen() {
   const [priceStr, setPriceStr] = useState('');
   const [showDropdown, setShowDropdown] = useState(false);
 
-  const { logs, payloads, error, clearLogs, clearPayloads } = usePythonLogsWS('ws://82.64.55.60:3000');
+  const { logs, payloads, error, clearLogs, clearPayloads } = usePythonLogsWS('wss://mon-serveur-node-143630968799.europe-west1.run.app');
+
 
   // Sauvegarde des tokens et autres dans les cookies
   useEffect(() => {

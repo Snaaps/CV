@@ -16,7 +16,7 @@
     "329.ed897052.js.map": "/static/js/329.ed897052.js.map"
   },
   "entrypoints": [
-    "CV/static/js/329.ed897052.js",
-    "CV/static/js/main.a2a5b04b.js"
+    "/static/js/329.ed897052.js",
+    "/static/js/main.a2a5b04b.js"
   ]
 }

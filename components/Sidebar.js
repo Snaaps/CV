@@ -172,11 +172,8 @@ const Sidebar = ({ activePage, setActivePage, scrollToSection, profileRef, exper
               </SubNavItem>
             );
           })}
-          <NavItem active={activePage === 'project'} onClick={() => { setActivePage('project'); scrollToSection(languagesRef); }}>
-            <FaComments size={20} /> <span>{t('project.title')}</span>
-          </NavItem>
-          <NavItem active={activePage === 'partitionsFifre'} onClick={() => setActivePage('partitionsFifre')}>
-            <FaMusic size={25} /> <span>{t('partitionsFifre.title')}</span>
+          <NavItem active={activePage === 'Powens'} onClick={() => setActivePage('Powens')}>
+            <FaMusic size={25} /> <span>{t('Powens.title')}</span>
           </NavItem>
           <NavItem active={activePage === 'Perso'} onClick={() => setActivePage('Perso')}>
             <FaMusic size={25} /> <span>{t('Perso.title')}</span>

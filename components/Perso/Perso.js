@@ -14,6 +14,8 @@ import SaaS5 from "./saas/SaaS5";
 import SaaS6 from "./saas/SaaS6";
 import SaaS7 from "./saas/SaaS7";
 import SaaS8 from "./saas/SaaS8";
+import SaaS9 from "./saas/SaaS9";
+import PowensScreen from "../../src/powens";
 
 const Perso = () => {
   const [activeTab, setActiveTab] = useState("saas1");
@@ -35,6 +37,8 @@ const Perso = () => {
     contentToDisplay = <SaaS7 />;
   } else if (activeTab === "saas8") {
     contentToDisplay = <SaaS8 />;
+  } else if (activeTab === "saas9") {
+    contentToDisplay = <SaaS9 />;
   }
 
   return (
@@ -60,6 +64,9 @@ const Perso = () => {
         </Tab>
         <Tab $active={activeTab === "saas7"} onClick={() => setActiveTab("saas7")}>
           Regex
+        </Tab>
+        <Tab $active={activeTab === "saas9"} onClick={() => setActiveTab("saas9")}>
+          Factures
         </Tab>
       </TabsContainer>
       <ContentArea>{contentToDisplay}</ContentArea>

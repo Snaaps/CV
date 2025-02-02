@@ -26,11 +26,16 @@ const Experience = () => {
             <li>{t('experience.freelance.description.3')}</li>
           </ul>
         </li>
+        {
+          /*
         <li>
           <h3>{t('experience.infiniteAgency.title')}</h3>
           <p>{t('experience.infiniteAgency.date')}</p>
           <p>{t('experience.infiniteAgency.description')}</p>
         </li>
+
+          */
+        }
         <li>
           <h3>{t('experience.aubagne.title')}</h3>
           <p>{t('experience.aubagne.date')}</p>

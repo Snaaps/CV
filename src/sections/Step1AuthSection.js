@@ -16,9 +16,9 @@ export function Step1AuthSection({
     setLoading(true);
     try {
       // 1) Google OAuth
-      //    => vous ouvrez le navigateur pour "http://localhost:3000/auth/google"
+      //    => vous ouvrez le navigateur pour "https://mon-serveur-node-143630968799.europe-west1.run.app/auth/google"
       //    => après la réussite, vous avez un user "firebase" ou session côté serveur, ...
-      await WebBrowser.openBrowserAsync('http://localhost:3000/auth/google');
+      await WebBrowser.openBrowserAsync('https://mon-serveur-node-143630968799.europe-west1.run.app/auth/google');
       
       // 2) Création user Powens
       const response = await fetch('https://infinite-sandbox.biapi.pro/2.0/auth/init', {

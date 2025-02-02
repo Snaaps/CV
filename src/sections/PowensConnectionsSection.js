@@ -24,7 +24,7 @@ export function PowensConnectionsSection({ powensToken }) {
         '?domain=infinite-sandbox.biapi.pro' +
         `&client_id=82059527` +
         `&code=${encodeURIComponent(code)}` +
-        `&redirect_uri=${encodeURIComponent('http://localhost:3000/powens/callback')}`;
+        `&redirect_uri=${encodeURIComponent('https://mon-serveur-node-143630968799.europe-west1.run.app/powens/callback')}`;
 
       await WebBrowser.openBrowserAsync(connectUrl);
     } catch (err) {
@@ -47,7 +47,7 @@ export function PowensConnectionsSection({ powensToken }) {
         '?domain=infinite-sandbox.biapi.pro' +
         `&client_id=82059527` +
         `&code=${encodeURIComponent(code)}` +
-        `&redirect_uri=${encodeURIComponent('http://localhost:3000/powens/callback')}`;
+        `&redirect_uri=${encodeURIComponent('https://mon-serveur-node-143630968799.europe-west1.run.app/powens/callback')}`;
 
       await WebBrowser.openBrowserAsync(manageUrl);
     } catch (err) {

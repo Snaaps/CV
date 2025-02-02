@@ -30,11 +30,7 @@ export function GoogleAuthControl({ googleToken, setGoogleToken, setUserId }) {
 
   const handleGoogleLogout = async () => {
     try {
-<<<<<<< HEAD
       await WebBrowser.openBrowserAsync('https://mon-serveur-node-143630968799.europe-west1.run.app/auth/logout');
-=======
-      await WebBrowser.openBrowserAsync('http://82.64.55.60:3000/auth/logout');
->>>>>>> 09567966791b3604034d66806efeca547eb5a1da
       setGoogleToken(null);
     } catch (err) {
       console.error(err);

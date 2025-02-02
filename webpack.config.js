@@ -16,6 +16,13 @@ module.exports = async function(env, argv) {
     'expo/dom/global': false,
   };
 
+  // Ajout d'alias pour rediriger vers notre module vide
+  config.resolve.alias = {
+    ...(config.resolve.alias || {}),
+    'expo/dom': path.resolve(__dirname, 'emptyModule.js'),
+    'expo/dom/global': path.resolve(__dirname, 'emptyModule.js'),
+  };
+
     config.output.publicPath = '/';
 
   return config;

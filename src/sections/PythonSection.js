@@ -19,12 +19,11 @@ export function PythonSection({
   }));
   
     try {
-      const userIdCookie = Cookies.set('userId', userId, { expires: 7 })
       const response = await fetch('https://mon-serveur-node-143630968799.europe-west1.run.app/start_python_process', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          userIdCookie,
+          userId,
           lines_json_str: linesJson,
           priceStr
         }),

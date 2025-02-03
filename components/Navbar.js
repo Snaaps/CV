@@ -100,9 +100,6 @@ const Navbar = ({ activePage, setActivePage, scrollToSection, profileRef, experi
           <FaFileAlt size={20} /> <span>{t('cv.title')}</span>
         </DropdownItem>
         
-        <DropdownItem active={activePage === 'projet'} onClick={() => { setActivePage('projet'); setShowMenu(false); }}>
-          <FaComments size={20} /> <span>{t('project.title')}</span>
-        </DropdownItem>
         <DropdownItem active={activePage === 'Powens'} onClick={() => { setActivePage('Powens'); setShowMenu(false); }}>
   
           <FaMusic size={20} /> <span>Powens</span>

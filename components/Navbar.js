@@ -105,7 +105,7 @@ const Navbar = ({ activePage, setActivePage, scrollToSection, profileRef, experi
         </DropdownItem>
         <DropdownItem active={activePage === 'Powens'} onClick={() => { setActivePage('Powens'); setShowMenu(false); }}>
   
-          <FaMusic size={20} /> <span>Partitions Fifre</span>
+          <FaMusic size={20} /> <span>Powens</span>
         </DropdownItem>
         <DropdownItem active={activePage === 'Perso'} onClick={() => { setActivePage('Perso'); setShowMenu(false); }}>
   
